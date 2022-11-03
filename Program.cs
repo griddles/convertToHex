@@ -7,14 +7,14 @@ namespace convertToHex
     {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine(HexConverter("deez nuts"));
         }
 
         public static string HexConverter(string str)
         {
             byte[] bytes = Encoding.Default.GetBytes(str);
             string hexString = BitConverter.ToString(bytes);
-            return hexString.Replace("-", " ");
+            return hexString.Replace("-", " ").ToLower();
         }
     }
 }
